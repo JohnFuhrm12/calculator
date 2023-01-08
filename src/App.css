@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+html, body {
+  margin: 0;
+  background-color: gray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#calculator {
+  background-color: black;
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 10%;
+  border: solid 4px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#display {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: right;
+  font-size: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#buttons {
+  background-color: gray;
+}
+
+#row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+}
+
+.buttonLarge {
+  background-color: red;
+  cursor: pointer;
+  width: 60%;
+  font-size: 20px;
+  padding-top: 5%;
+  padding-bottom: 5%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.buttonSmall {
+  background-color: rgb(83, 82, 82);
+  cursor: pointer;
+  width: 30%;
+  font-size: 25px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttonEquals {
+  background-color: rgb(25, 25, 114);
+  cursor: pointer;
+  width: 30%;
+  font-size: 20px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: white;
+}
+
+#zero {
+  background-color: rgb(83, 82, 82);
 }
