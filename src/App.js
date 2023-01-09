@@ -27,8 +27,16 @@ function App() {
 
   function handleOperator(e) {
     setPreviousInput(e.currentTarget.innerText);
-    if (display !== 0 && previousInput !== '+' && previousInput !== '-' && previousInput !== '/' && previousInput !== '*') {
+    if (e.currentTarget.innerText !== '-' && display !== 0 && previousInput !== '+' && previousInput !== '-' && previousInput !== '/' && previousInput !== '*') {
       setDisplay(display + e.currentTarget.innerText);
+      setDecimalInNum(false);
+    }
+    if (e.currentTarget.innerText === '-' && display !== 0 && previousInput !== '-') {
+      setDisplay(display + e.currentTarget.innerText);
+      setDecimalInNum(false);
+    }
+    if (e.currentTarget.innerText === '-' && display === 0) {
+      setDisplay(e.currentTarget.innerText);
       setDecimalInNum(false);
     }
   };
@@ -71,7 +79,7 @@ function App() {
             <button onClick={handleNumber} id="one" className="buttonSmall">1</button>
             <button onClick={handleNumber} id="two" className="buttonSmall">2</button>
             <button onClick={handleNumber} id="three" className="buttonSmall">3</button>
-            <button id="sdfsfd" className="buttonSmall">N</button>
+            <button id="empty" className="buttonSmall">N</button>
           </div>
           <div id="row">
             <button onClick={handleNumber} id="zero" className="buttonLarge">0</button>
